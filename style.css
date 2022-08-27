@@ -1,0 +1,255 @@
+body{
+    background-color: #f5f5f5;
+    font-family: 'Inter', sans-serif;
+    margin: 40px 0;
+    letter-spacing: 0.2px;
+}
+h3, h4,a{
+    color: #55626E;
+}
+p, li{
+    font-size: 14px;
+    font-weight: 400;
+    color: #626E79
+}
+a{
+    text-decoration: none;
+}
+.wrapper{
+    max-width: 1024px;
+    margin: auto;
+}
+.propuct-wrapper{
+    background-color: #ffffff;
+    box-shadow: 0px 51px 114px rgb(199 199 199 / 15%), 0px 15.375px 34.3677px rgb(199 199 199 / 9%), 0px 6.38599px 14.2746px rgb(199 199 199 / 6%), 0px 2.30969px 5.16283px rgb(199 199 199 / 4%);
+    border-radius: 12px;
+}
+.item-product{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    margin-top: 24px;
+    padding: 16px 17px 26px 12px;
+
+}
+.index{
+    font-size: 81px;
+    font-weight: 700;
+    color: #55626E40;
+    align-self: center;
+}
+.thumbnail {
+    margin: 0 24px;
+}
+.description{
+    flex: 1 0 25%;
+}
+.description h3{
+    margin: 0;
+    font-weight: 600;
+    font-size: 16px;  
+}
+.description p{
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+.description div{
+    display: inline-block;
+    background: #55A0EA;
+    border-radius: 4px;
+    padding: 2px 4px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.2px;
+}
+.reting{
+    text-align: center;
+    margin: 0 24px;
+    align-self: center;
+}
+.points{
+    font-weight: 700;
+    color: #55626E;
+    font-size: 32px;
+    position: relative;
+}
+.points img{
+    position: absolute
+}
+/* use display:inline-flex to prevent whitespace issues. alternatively, you can put all the children of .rating-group on a single line */
+.rating-group {
+    display: inline-flex;
+}
+/* make hover effect work properly in IE */
+.rating__icon {
+    pointer-events: none;
+}
+  /* hide radio inputs */
+.rating__input {
+   position: absolute !important;
+   left: -9999px !important;
+}
+/* set icon padding and size */
+.rating__label {
+    cursor: pointer;
+    /* if you change the left/right padding, update the margin-right property of .rating__label--half as well. */
+    padding: 0 0.1em;
+    font-size: 12px;
+}
+
+/* add padding and positioning to half star labels */
+.rating__label--half {
+    padding-right: 0;
+    margin-right: -0.6em;
+    z-index: 2;
+}
+  
+/* set default star color */
+.rating__icon--star {
+    color: #0B76E0;
+}
+  
+  /* set color of none icon when unchecked */
+.rating__icon--none {
+    color: #eee;
+}
+
+/* if any input is checked, make its following siblings grey */
+.rating__input:checked ~ .rating__label .rating__icon--star {
+    color: #ddd;
+}
+  
+/* make all stars orange on rating group hover */
+.rating-group:hover .rating__label .rating__icon--star,
+.rating-group:hover .rating__label--half .rating__icon--star {
+    color: #0B76E0;
+}
+/* make hovered input's following siblings grey on hover */
+.rating__input:hover ~ .rating__label .rating__icon--star,
+.rating__input:hover ~ .rating__label--half .rating__icon--star {
+    color: #ddd;
+}
+  
+/* make none icon grey on rating group hover */
+.rating-group:hover .rating__input--none:not(:hover) + .rating__label .rating__icon--none {
+     color: #eee;
+}
+.button-primary{
+    width: 246px;
+    padding: 10px 83px;
+    white-space: nowrap;
+    background: #0B76E0;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    align-self: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 1px solid #0B76E0
+
+}
+.button-primary:hover{
+    background-color:#ffffff;
+    color: #0B76E0;
+}
+.wrapper-links{
+    position: absolute;
+    bottom: 26px;
+    right: 12px;
+    width: 240px;
+    display: flex;
+    justify-content: space-between;
+}
+#amazon_link{
+    color: #626E79;
+    font-weight: 400;
+    font-size: 14px;
+}
+#show_more{
+    color: #55626E;
+    font-weight: 600;
+    font-size: 14px;
+}
+.best-value{
+    position: absolute;
+    top: -14px;
+    left: -6px;
+}
+.highlights{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: end;
+    padding-right: 12px;
+    padding-bottom: 34px;
+    height: auto;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.2s;
+}
+.highlights.hide{
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    padding: 0;
+}
+.highlights-description{
+    margin-left: 116px;
+    padding-right: 10%;
+}
+.highlights-description h4{
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+.highlights-description ul{
+    font-size: 14px;
+    font-weight: 400;
+    padding-left: 22px;
+    line-height: 1.4;
+}
+.button-secondary{
+    display: block;
+    width: 246px;
+    padding: 10px 83px;
+    white-space: nowrap;
+    background: #ffffff;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #0B76E0;
+    align-self: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 1px solid #0B76E0
+}
+.button-secondary:hover{
+    background:  #0B76E0;
+    color: #ffffff;
+}
+.main-price{
+    font-size: 24px;
+    font-weight: 600;
+    color: #2C384A;
+    margin-bottom: 0;
+}
+.discount-price{
+    display: inline-block;
+    text-decoration: line-through;
+    font-size: 18px;
+    font-weight: 400;
+    color: #9FA9B3
+}
+.price span{
+    font-weight: 400;
+    font-size: 14px;
+    color: #DF0923;
+}
+  
